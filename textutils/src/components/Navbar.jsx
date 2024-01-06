@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from 'prop-types'
 
 
-export default function Navbar({ title, contact, ...extra }) {
+function Navbar({ title, contact, ...extra }) {
   return (
     <nav className="navbar navbar-expand-lg bg-body-tertiary">
       <div className="container-fluid">
@@ -46,7 +46,7 @@ export default function Navbar({ title, contact, ...extra }) {
               placeholder="Search"
               aria-label="Search"
             />
-            <button className="btn btn-outline-danger" type="submit">
+            <button className="btn btn-outline-info" type="submit">
               Search
             </button>
           </form>
@@ -55,3 +55,5 @@ export default function Navbar({ title, contact, ...extra }) {
     </nav>
   );
 }
+
+export default Navbar;

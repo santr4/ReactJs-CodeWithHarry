@@ -3,7 +3,7 @@ import "./App.css";
 import Navbar from "./components/Navbar";
 import Body from "./components/Body";
 
-const arr = ["Santra ", "Kya ", "Hai ", "- "];
+const arr = ["Hello ", "Everyone "];
 
 function App() {
   return (

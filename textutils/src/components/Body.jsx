@@ -4,7 +4,9 @@ function Body({ bodyContent }) {
     return (
         <body>
             <div>
-                {[...bodyContent, "ProCoder"].map(val => val)} {/*spread operator*/}
+                <bold>
+                {[...bodyContent, "Welcome "].map(val => val)} {/*spread operator*/}
+                </bold>
             </div>
         </body>
     )
