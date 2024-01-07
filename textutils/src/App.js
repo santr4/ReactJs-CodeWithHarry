@@ -11,9 +11,8 @@ function App() {
     <>
       <Navbar title="Textutils" contact="Contact" about="About" />
       {/* <Body bodyContent={arr} /> */}
-      <br />
-      <div className="container">
-        <TextForm />
+      <div className="container my-5">
+        <TextForm heading="Enter Your Text here!" />
       </div>
     </>
   );
