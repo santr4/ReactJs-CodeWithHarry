@@ -10,15 +10,28 @@ function TextForm({heading}){
     const handleOnChange = (event)=> {
         setText(event.target.value);
     }
+    const handleLoClick = ()=> {
+        let newText1 = text.toLowerCase();
+        setText(newText1);
+    }
     const [text,setText] = useState('Write Here Something');
     return(
-        <div>
-            <div className="mb-3">
-                <label forName="myText" className="form-label">{heading}</label>
+        <>
+            <div className="container mb-3">
+                <h1>{heading}</h1>
                 <textarea className="form-control form-control-lg" value={text} onChange={handleOnChange} id="myText" rows="10"></textarea>
-                <button className="btn btn-primary my-2" onClick={handleUpClick}>Conver to UpperCase</button>
+                <button className="btn btn-primary my-2" onClick={handleUpClick}>Convert to UpperCase</button>
+                <button className="btn btn-primary mx-2" onClick={handleLoClick}>Convert to LowerCase</button>
             </div>
-        </div>        
+            <div className="container my-2">
+                <h1>Text Summary</h1>
+                <p>{text.split(" ").length} words, {text.length} characters</p>
+                <p>{0.004 * text.split(" ").length} Minutes Read</p>
+                <p>{60 * 0.004 * text.split(" ").length} Seconds Read</p>
+                <h2>Preview</h2>
+                <p>{text}</p>
+            </div>
+        </>        
     )
 }
 

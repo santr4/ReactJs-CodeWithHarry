@@ -4,13 +4,12 @@ import React from "react";
 
 function Navbar({ title, contact, ...extra }) {
   return (
-    <nav className="navbar navbar-expand-lg bg-body-tertiary">
+    <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
       <div className="container-fluid">
         <a className="navbar-brand" href="/">
           {title}
         </a>
         <button
-        
           className="navbar-toggler"
           type="button"
           data-bs-toggle="collapse"
