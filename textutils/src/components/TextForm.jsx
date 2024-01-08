@@ -14,14 +14,19 @@ function TextForm({heading}){
         let newText1 = text.toLowerCase();
         setText(newText1);
     }
+    const handleClearClick = ()=> {
+        let newText2 = '';
+        setText(newText2);
+    }
     const [text,setText] = useState('Write Here Something');
     return(
         <>
             <div className="container mb-3">
                 <h1>{heading}</h1>
                 <textarea className="form-control form-control-lg" value={text} onChange={handleOnChange} id="myText" rows="10"></textarea>
-                <button className="btn btn-primary my-2" onClick={handleUpClick}>Convert to UpperCase</button>
+                <button className="btn btn-primary my-2 mx-2" onClick={handleUpClick}>Convert to UpperCase</button>
                 <button className="btn btn-primary mx-2" onClick={handleLoClick}>Convert to LowerCase</button>
+                <button className="btn btn-primary mx-2" onClick={handleClearClick}>Clear Text</button>
             </div>
             <div className="container my-2">
                 <h1>Text Summary</h1>
