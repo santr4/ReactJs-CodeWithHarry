@@ -3,6 +3,7 @@ import "./App.css";
 import Navbar from "./components/Navbar";
 // import Body from "./components/Body";
 import TextForm from "./components/TextForm";
+import About from "./components/About";
 
 // const arr = ["Hello ", "Everyone "];
 
@@ -13,6 +14,9 @@ function App() {
       {/* <Body bodyContent={arr} /> */}
       <div className="container my-5">
         <TextForm heading="Enter Your Text here!" />
+      </div>
+      <div className="container my-3">
+        <About />
       </div>
     </>
   );
