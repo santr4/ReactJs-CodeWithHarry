@@ -16,7 +16,7 @@ function App() {
         <TextForm heading="Enter Your Text here!" />
       </div>
       <div className="container my-3">
-        <About />
+        <About heading="About Us" />
       </div>
     </>
   );
