@@ -18,6 +18,10 @@ function TextForm({heading}){
         let newText2 = '';
         setText(newText2);
     }
+    const handleTrimClick = ()=> {
+        let newText3 = text.trim();
+        setText(newText3);
+    }
     const [text,setText] = useState('Write Here Something');
     return(
         <>
@@ -27,6 +31,7 @@ function TextForm({heading}){
                 <button className="btn btn-primary my-2 mx-2" onClick={handleUpClick}>Convert to UpperCase</button>
                 <button className="btn btn-primary mx-2" onClick={handleLoClick}>Convert to LowerCase</button>
                 <button className="btn btn-primary mx-2" onClick={handleClearClick}>Clear Text</button>
+                <button className="btn btn-primary mx-2" onClick={handleTrimClick}>Trim</button>
             </div>
             <div className="container my-2">
                 <h1>Text Summary</h1>
